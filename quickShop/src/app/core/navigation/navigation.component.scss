@@ -1,0 +1,52 @@
+.navigation {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.navigation__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation__img {
+  width: 200px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.navigation__ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navigation__li {
+  height: 100%;
+  list-style: none;
+  padding: 40px 20px;
+  transition: 0.5s all ease-in-out;
+
+  a {
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    transition: 0.5s all ease-in-out;
+  }
+
+  &:hover {
+    background-color: white;
+
+    a {
+      color: black;
+    }
+  }
+}

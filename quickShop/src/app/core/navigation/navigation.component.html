@@ -1,0 +1,39 @@
+<nav>
+  <div class="navigation">
+    <div class="navigation__logo">
+      <a routerLink="/">
+        <img
+          src="../../../assets/dsBuffer.bmp.png"
+          alt="Quick Logo"
+          class="navigation__img"
+        />
+      </a>
+    </div>
+    <div class="navigation__links">
+      <ul class="navigation__ul">
+        <li class="navigation__li">
+          <a routerLink="/sale">Продукти на промоция</a>
+        </li>
+
+        <li class="navigation__li">
+          <a routerLink="/products">Всички продукти</a>
+        </li>
+        <li class="navigation__li">
+          <a routerLink="/shops">Магазини</a>
+        </li>
+        <li class="navigation__li">
+          <a routerLink="/work">Работа</a>
+        </li>
+        <li class="navigation__li">
+          <a routerLink="/about">За нас</a>
+        </li>
+        <li *ngIf="!logged" class="navigation__li">
+          <a routerLink="/login">Login</a>
+        </li>
+        <li *ngIf="!logged" class="navigation__li">
+          <a routerLink="/register">Register</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,43 @@
+.title {
+  padding: 20px 30px;
+
+  font-size: 44px;
+  text-align: center;
+}
+
+.line {
+  border: 5px solid #f09d51;
+  width: 10%;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.infoContainer {
+  padding: 0px 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.seeAll {
+  padding: 20px;
+  margin-left: 10rem;
+  margin-bottom: 30px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  transition: 0.5s all ease;
+  font-size: 20px;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
