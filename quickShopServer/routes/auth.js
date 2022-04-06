@@ -49,7 +49,7 @@ router.post("/login", async (req, res) => {
     );
 
     const { password, ...otherInfo } = user._doc;
-    console.log(password);
+
     res.status(200).json({ ...otherInfo, accessToken });
   } catch (error) {
     res.status(500).json(error);
