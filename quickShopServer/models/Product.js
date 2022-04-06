@@ -8,6 +8,10 @@ const ProductSchema = new mongoose.Schema(
       unique: true,
     },
     description: {
+      type: Array,
+      required: true,
+    },
+    image: {
       type: String,
       required: true,
     },
@@ -18,6 +22,9 @@ const ProductSchema = new mongoose.Schema(
     quantity: {
       type: Number,
     },
+    categories: {
+      type: Array,
+    },
     allKinds: {
       type: Boolean,
       default: false,
@@ -25,9 +32,6 @@ const ProductSchema = new mongoose.Schema(
     onSale: {
       type: Boolean,
       default: false,
-    },
-    categories: {
-      type: Array,
     },
   },
   { timestamps: true }
