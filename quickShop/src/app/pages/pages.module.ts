@@ -6,6 +6,7 @@ import { ProductRoutingModule } from './products/products-routing.module';
 import { RegisterComponent } from './register/register.component';
 import { ProductsSaleComponent } from './products-sale/products-sale.component';
 import { ComponentsModule } from '../components/components.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,11 @@ import { ComponentsModule } from '../components/components.module';
     RegisterComponent,
     ProductsSaleComponent,
   ],
-  imports: [CommonModule, ProductRoutingModule, ComponentsModule],
+  imports: [
+    CommonModule,
+    ProductRoutingModule,
+    ComponentsModule,
+    HttpClientModule,
+  ],
 })
 export class PagesModule {}
