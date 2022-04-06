@@ -1,1 +1,12 @@
-<div class="container"></div>
+<div class="container">
+  <div class="imageContainer">
+    <img src="{{ product.image }}" alt="" />
+  </div>
+  <div class="infoContainer">
+    <h1 class="title">{{ product.title }}</h1>
+    <div class="price">Цена: {{ product.price }} лв</div>
+    <div class="quantity">Количество: {{ product.quantity }} L</div>
+    <h3>ДЕТАЙЛИ</h3>
+    <p *ngFor="let d of product.description" class="description">{{ d }}</p>
+  </div>
+</div>

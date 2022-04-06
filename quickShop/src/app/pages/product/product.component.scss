@@ -1,3 +1,44 @@
 .container {
-  padding-top: 100px;
+  padding-top: 150px;
+  display: flex;
+  justify-content: space-around;
+
+  img {
+    width: 750px;
+    height: 750px;
+  }
+
+  .infoContainer {
+    padding: 0px 40px;
+    .title {
+      font-size: 42px;
+      margin: 60px 0px;
+    }
+
+    .price,
+    .quantity {
+      color: #f09d51;
+      font-weight: bold;
+    }
+
+    div {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      font-size: 30px;
+      margin-bottom: 30px;
+      margin-top: 50px;
+      padding: 10px;
+      border-bottom: 1px solid rgb(141, 140, 140);
+    }
+
+    p {
+      font-size: 24px;
+      margin-bottom: 15px;
+      line-height: 1;
+      color: rgb(95, 95, 95);
+    }
+  }
 }
