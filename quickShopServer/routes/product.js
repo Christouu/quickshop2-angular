@@ -89,4 +89,14 @@ router.get("/", async (req, res) => {
   }
 });
 
+//get products on sale
+router.get("/onSale", async (req, res) => {
+  try {
+    const productsOnSale = await Product.find({ onSale: true });
+    res.status(200).json(productsOnSale);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
 module.exports = router;
