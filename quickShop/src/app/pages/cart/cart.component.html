@@ -1,0 +1,16 @@
+<div class="container">
+  <div *ngFor="let product of products; let i = index" class="wrapper">
+    <div class="imageContainer">
+      <h1>{{ i + 1 }}</h1>
+      <img src="{{ product.image }}" alt="" />
+    </div>
+    <div class="infoContainer">
+      <h2>{{ product.title }}</h2>
+      <p>Количество: {{ product.quantity }}</p>
+      <p>Цена: {{ product.price }}</p>
+      <p *ngIf="product.allKinds">
+        Различни видево: {{ product.allKinds && "Да" }}
+      </p>
+    </div>
+  </div>
+</div>

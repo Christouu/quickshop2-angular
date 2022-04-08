@@ -7,6 +7,7 @@ import { RegisterComponent } from './register/register.component';
 import { ProductsSaleComponent } from './products-sale/products-sale.component';
 import { ComponentsModule } from '../components/components.module';
 import { HttpClientModule } from '@angular/common/http';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
     ProductComponent,
     RegisterComponent,
     ProductsSaleComponent,
+    CartComponent,
   ],
   imports: [
     CommonModule,
