@@ -27,13 +27,21 @@
         <li class="navigation__li">
           <a routerLink="/about">За нас</a>
         </li>
-        <li *ngIf="!logged" class="navigation__li">
-          <a routerLink="/login">Login</a>
-        </li>
-        <li *ngIf="!logged" class="navigation__li">
-          <a routerLink="/register">Register</a>
-        </li>
       </ul>
+    </div>
+    <div class="badge">
+      <mat-icon *ngIf="logged" [matBadge]="quantity" class="whiteColor"
+        ><a routerLink="/cart">shopping_cart</a></mat-icon
+      >
+      <li *ngIf="!logged" class="navigation__li">
+        <a routerLink="/login">Login</a>
+      </li>
+      <li *ngIf="!logged" class="navigation__li">
+        <a routerLink="/register">Register</a>
+      </li>
+      <li *ngIf="logged" class="navigation__li">
+        <a routerLink="/" (click)="Logout()">Logout</a>
+      </li>
     </div>
   </div>
 </nav>

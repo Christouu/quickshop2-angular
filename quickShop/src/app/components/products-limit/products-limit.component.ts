@@ -20,7 +20,6 @@ export class ProductsLimitComponent implements OnInit {
       .get<Product[]>('http://localhost:5000/api/product/onSale')
       .subscribe((products) => {
         this.products = products;
-        console.log(this.products);
       });
   }
 }

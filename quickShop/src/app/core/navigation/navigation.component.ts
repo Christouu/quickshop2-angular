@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-navigation',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
   admin = true;
-  logged = false;
+  logged = true;
+  quantity = 0;
 
-  constructor() {}
+  constructor(public cartService: CartService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.cartService.getProducts().subscribe((res) => {
+      this.quantity = res.length;
+    });
+  }
+
+  Logout() {
+    this.logged = !this.logged;
+  }
 }
