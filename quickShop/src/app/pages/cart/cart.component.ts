@@ -8,12 +8,15 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class CartComponent implements OnInit {
   products: any = [];
+  totalPrice: any = 0;
+
   constructor(public cartService: CartService) {}
 
   ngOnInit(): void {
     this.cartService.getProducts().subscribe((res) => {
       this.products = res;
+      this.totalPrice = this.cartService.getTotalPrice();
+      this.totalPrice = Math.round(this.totalPrice * 100) / 100;
     });
-    console.log(this.products);
   }
 }

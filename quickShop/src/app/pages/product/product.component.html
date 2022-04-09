@@ -8,5 +8,14 @@
     <div class="quantity">Количество: {{ product.quantity }} L</div>
     <h3>ДЕТАЙЛИ</h3>
     <p *ngFor="let d of product.description" class="description">{{ d }}</p>
+    <div class="buttons">
+      <div>
+        <button (click)="addToCart()">Add to cart</button>
+        <span class="notification" *ngIf="added"
+          >Добавихте продукт към количката!</span
+        >
+      </div>
+      <img class="logo" src="assets/dsBuffer.bmp.png" alt="quick logo" />
+    </div>
   </div>
 </div>

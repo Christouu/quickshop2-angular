@@ -41,4 +41,38 @@
       color: rgb(95, 95, 95);
     }
   }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button {
+      padding: 20px;
+      margin: 30px 0px;
+      background-color: black;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      border: none;
+      transition: 0.5s all ease;
+      font-size: 20px;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
+    .notification {
+      color: red;
+      margin-left: 30px;
+      font-size: 20px;
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+  }
 }

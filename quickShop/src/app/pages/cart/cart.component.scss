@@ -1,19 +1,46 @@
 .container {
   padding-top: 100px;
+  text-align: center;
+  margin: 40px 0px;
+  min-height: 50vh;
+
+  h1 {
+    font-size: 40px;
+  }
 
   .wrapper {
     display: flex;
     align-items: center;
     // justify-content: space-between;
-    padding: 0px 20rem;
+    padding: 50px 20rem;
+    margin: 0 auto;
 
-    .imageContainer {
+    .info {
+      flex: 2;
+      border-bottom: 2px solid gray;
       display: flex;
       align-items: center;
-      img {
-        height: 200px;
-        width: 200px;
+
+      .imageContainer {
+        display: flex;
+        align-items: center;
+        img {
+          height: 200px;
+          width: 200px;
+        }
       }
     }
+  }
+
+  .summary {
+    border: 2px solid black;
+    width: 40%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 40px auto;
+    padding: 20px;
+    font-size: 28px;
   }
 }

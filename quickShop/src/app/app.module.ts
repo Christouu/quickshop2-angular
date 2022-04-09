@@ -8,7 +8,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PagesModule } from './pages/pages.module';
-import { CartService } from './services/cart.service';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, NotFoundComponent],

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CartService } from 'src/app/services/cart.service';
 
 interface Product {
   allKinds: boolean;
@@ -32,8 +33,13 @@ export class ProductComponent implements OnInit {
     title: '',
     _id: '',
   };
+  added = 0;
 
-  constructor(public http: HttpClient, private route: ActivatedRoute) {}
+  constructor(
+    public http: HttpClient,
+    private route: ActivatedRoute,
+    public cartService: CartService
+  ) {}
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
@@ -42,5 +48,10 @@ export class ProductComponent implements OnInit {
       .subscribe((product) => {
         this.product = product;
       });
+  }
+
+  addToCart() {
+    this.cartService.addToCart(this.product);
+    this.added++;
   }
 }
