@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { debounceTime, map, Observable, Subject } from 'rxjs';
 
 @Component({
   selector: 'app-products-sale',
@@ -8,6 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsSaleComponent implements OnInit {
   products: any = [];
+  // subject = new Subject();
+  // //@ts-ignore
+  // results$: Observable;
   constructor(public http: HttpClient) {}
 
   ngOnInit(): void {
@@ -15,7 +19,16 @@ export class ProductsSaleComponent implements OnInit {
       .get('http://localhost:5000/api/product/onSale')
       .subscribe((products) => {
         this.products = products;
-        console.log(this.products);
       });
+  }
+
+  getFilteredData(evt: any) {
+    setTimeout(() => {
+      this.http
+        .get(`http://localhost:5000/api/product?category=${evt.target.value}`)
+        .subscribe((products) => {
+          this.products = products;
+        });
+    }, 1000);
   }
 }
