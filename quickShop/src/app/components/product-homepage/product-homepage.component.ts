@@ -32,6 +32,8 @@ export class ProductHomepageComponent implements OnInit {
     onSale: false,
   };
 
+  @Input() style = false;
+
   public productList = this.input;
 
   constructor(public http: HttpClient, public cartService: CartService) {}

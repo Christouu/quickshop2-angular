@@ -1,0 +1,14 @@
+<div class="container">
+  <h1 class="title">Продукти</h1>
+  <div class="line"></div>
+  <div class="infoContainer">
+    <app-product-homepage
+      *ngFor="let product of products"
+      [input]="product"
+      [style]="allProductsStyles"
+    ></app-product-homepage>
+  </div>
+  <a routerLink="/products">
+    <button class="seeAll">Виж всички продукти</button>
+  </a>
+</div>

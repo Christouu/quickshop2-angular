@@ -7,6 +7,7 @@ import { ProductsLimitComponent } from './products-limit/products-limit.componen
 import { ProductHomepageComponent } from './product-homepage/product-homepage.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { AllProductsComponent } from './all-products/all-products.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
     CarouselComponent,
     ProductsLimitComponent,
     ProductHomepageComponent,
+    AllProductsComponent,
   ],
   imports: [CommonModule, MatIconModule, RouterModule, HttpClientModule],
   exports: [
@@ -21,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     CarouselComponent,
     ProductsLimitComponent,
     ProductHomepageComponent,
+    AllProductsComponent,
   ],
 })
 export class ComponentsModule {}
