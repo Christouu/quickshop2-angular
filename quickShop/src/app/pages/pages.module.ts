@@ -8,6 +8,8 @@ import { ProductsSaleComponent } from './products-sale/products-sale.component';
 import { ComponentsModule } from '../components/components.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
+import { MatIconModule } from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { CartComponent } from './cart/cart.component';
     ProductRoutingModule,
     ComponentsModule,
     HttpClientModule,
+    MatIconModule,
+    FormsModule,
   ],
 })
 export class PagesModule {}
