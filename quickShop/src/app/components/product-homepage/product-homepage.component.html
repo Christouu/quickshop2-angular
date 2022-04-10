@@ -1,5 +1,5 @@
 <h2>{{ input.title }}</h2>
-<div class="container">
+<div class="container" [class.normal]="style">
   <img src="{{ input.image }}" alt="" class="product" />
   <div class="info">
     <div (click)="addToCart()" class="icon">
