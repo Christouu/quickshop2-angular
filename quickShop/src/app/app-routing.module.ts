@@ -21,18 +21,22 @@ const routes: Routes = [
   {
     path: 'cart',
     component: CartComponent,
+    data: { animation: 'isLeft' },
   },
   {
     path: 'login',
     component: LoginComponent,
+    data: { animation: 'isLeft' },
   },
   {
     path: 'register',
     component: RegisterComponent,
+    data: { animation: 'isLeft' },
   },
   {
     path: '**',
     component: NotFoundComponent,
+    data: { animation: 'isLeft' },
   },
 ];
 

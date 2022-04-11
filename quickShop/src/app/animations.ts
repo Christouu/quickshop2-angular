@@ -3,11 +3,13 @@ import {
   transition,
   style,
   query,
-  group,
-  animateChild,
   animate,
-  keyframes,
 } from '@angular/animations';
+
+//The trigger name of routeAnimations must match the trigger used in the app component HTML.
+//Using wildcard syntax like * <=> * applies the default animation to all routes.
+//When an animation is triggered we have access the the previous page via the :leave selector,
+// and the current page via the :enter selector. We can query these elements to style and animate them.
 
 export const fader = trigger('routeAnimations', [
   transition('* <=> *', [
