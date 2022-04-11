@@ -8,7 +8,7 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class NavigationComponent implements OnInit {
   admin = true;
-  logged = true;
+  logged = false;
   quantity = 0;
 
   constructor(public cartService: CartService) {}
@@ -20,6 +20,7 @@ export class NavigationComponent implements OnInit {
   }
 
   Logout() {
+    localStorage.clear();
     this.logged = !this.logged;
   }
 }

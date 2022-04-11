@@ -3,7 +3,7 @@
     <h1 class="title">Sign In</h1>
     <form #login="ngForm" (ngSubmit)="loginHandler(login.value)">
       <label for="username">Username</label>
-      <input #emailInput="ngModel" type="text" ngModel name="username" />
+      <input type="text" ngModel name="username" />
       <label for="password">Password</label>
       <input type="password" ngModel name="password" />
       <button>Login</button>
