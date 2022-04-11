@@ -18,6 +18,7 @@ import { PagesModule } from './pages/pages.module';
     ComponentsModule,
     BrowserAnimationsModule,
     PagesModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
 

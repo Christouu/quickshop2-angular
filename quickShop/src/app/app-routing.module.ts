@@ -11,10 +11,12 @@ const routes: Routes = [
     path: '',
     pathMatch: 'full',
     component: HomeComponent,
+    data: { animation: 'isRight' },
   },
   {
     path: 'sale',
     component: ProductsSaleComponent,
+    data: { animation: 'isLeft' },
   },
   {
     path: 'cart',
@@ -34,4 +36,6 @@ const routes: Routes = [
   },
 ];
 
-export const AppRoutingModule = RouterModule.forRoot(routes);
+export const AppRoutingModule = RouterModule.forRoot(routes, {
+  scrollPositionRestoration: 'enabled',
+});
