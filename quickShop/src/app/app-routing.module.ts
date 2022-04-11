@@ -11,32 +11,32 @@ const routes: Routes = [
     path: '',
     pathMatch: 'full',
     component: HomeComponent,
-    data: { animation: 'isRight' },
+    data: { animation: '1' },
   },
   {
     path: 'sale',
     component: ProductsSaleComponent,
-    data: { animation: 'isLeft' },
+    data: { animation: '2' },
   },
   {
     path: 'cart',
     component: CartComponent,
-    data: { animation: 'isLeft' },
+    data: { animation: '3' },
   },
   {
     path: 'login',
     component: LoginComponent,
-    data: { animation: 'isLeft' },
+    data: { animation: '4' },
   },
   {
     path: 'register',
     component: RegisterComponent,
-    data: { animation: 'isLeft' },
+    data: { animation: '5' },
   },
   {
     path: '**',
     component: NotFoundComponent,
-    data: { animation: 'isLeft' },
+    data: { animation: '6' },
   },
 ];
 

@@ -13,6 +13,7 @@ export class AppComponent {
 
   constructor(public router: Router) {}
 
+  //optional , use this for multiple animation effects
   prepareRoute(outlet: RouterOutlet) {
     return (
       outlet &&
