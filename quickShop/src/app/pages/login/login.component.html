@@ -1,13 +1,14 @@
 <div class="container">
   <div class="wrapper">
     <h1 class="title">Sign In</h1>
-    <form>
+    <form #login="ngForm" (ngSubmit)="loginHandler(login.value)">
       <label for="username">Username</label>
-      <input type="text" name="username" />
+      <input #emailInput="ngModel" type="text" ngModel name="username" />
       <label for="password">Password</label>
-      <input type="password" name="password" />
-      <button type="button">Login</button>
+      <input type="password" ngModel name="password" />
+      <button>Login</button>
       <a routerLink="/register">CREATE A NEW ACCOUNT</a>
+      <div *ngIf="error">Couldnt login</div>
     </form>
   </div>
 </div>

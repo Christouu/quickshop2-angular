@@ -9,9 +9,10 @@ import { ComponentsModule } from '../components/components.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
 import { MatIconModule } from '@angular/material/icon';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
 import { AdminRoutingModule } from './admin/admin-routing.module';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -21,15 +22,17 @@ import { AdminRoutingModule } from './admin/admin-routing.module';
     ProductsSaleComponent,
     CartComponent,
     AdminComponent,
+    LoginComponent,
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     ProductRoutingModule,
     AdminRoutingModule,
     ComponentsModule,
     HttpClientModule,
     MatIconModule,
-    FormsModule,
   ],
 })
 export class PagesModule {}

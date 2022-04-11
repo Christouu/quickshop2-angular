@@ -12,6 +12,7 @@ import { TopbarComponent } from './topbar/topbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { FeatureInfoComponent } from './feature-info/feature-info.component';
 import { WidgetSmallComponent } from './widget-small/widget-small.component';
+import { WidgetLargeComponent } from './widget-large/widget-large.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { WidgetSmallComponent } from './widget-small/widget-small.component';
     SidebarComponent,
     FeatureInfoComponent,
     WidgetSmallComponent,
+    WidgetLargeComponent,
   ],
   imports: [CommonModule, MatIconModule, RouterModule, HttpClientModule],
   exports: [
@@ -36,6 +38,7 @@ import { WidgetSmallComponent } from './widget-small/widget-small.component';
     SidebarComponent,
     FeatureInfoComponent,
     WidgetSmallComponent,
+    WidgetLargeComponent,
   ],
 })
 export class ComponentsModule {}

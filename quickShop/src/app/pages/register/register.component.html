@@ -1,13 +1,16 @@
 <div class="container">
   <div class="wrapper">
     <h1 class="title">Register</h1>
-    <form>
-      <input type="text" placeholder="First Name" />
-      <input type="text" placeholder="Last Name" />
-      <input type="text" placeholder="Username" />
-      <input type="text" placeholder="Email" />
-      <input type="password" placeholder="Password" />
-      <input type="password" placeholder="Confirm Password" />
+    <form #register="ngForm" (ngSubmit)="registerHandler(register.value)">
+      <input type="text" ngModel name="username" placeholder="Username" />
+      <input type="text" ngModel name="email" placeholder="Email" />
+      <input type="password" ngModel name="password" placeholder="Password" />
+      <input
+        type="password"
+        ngModel
+        name="passwordRepeat"
+        placeholder="Confirm Password"
+      />
       <span class="agreement">
         By creating an account , I consent to the processing of my personal data
         in accordance with the <b>PRIVACY POLICY</b>

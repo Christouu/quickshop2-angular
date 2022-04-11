@@ -18,7 +18,7 @@ router.post("/register", async (req, res) => {
     const savedUser = await newUser.save();
     res.status(201).json(savedUser);
   } catch (error) {
-    res.status(500).json(error);
+    res.status(500).json("couldnt log in");
   }
 });
 
@@ -26,7 +26,6 @@ router.post("/register", async (req, res) => {
 router.post("/login", async (req, res) => {
   try {
     const user = await User.findOne({ username: req.body.username });
-
     !user && res.status(401).json("Wrong username");
 
     const hashedPassword = cryptojs.AES.decrypt(
