@@ -8,6 +8,10 @@ import { ProductHomepageComponent } from './product-homepage/product-homepage.co
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { AllProductsComponent } from './all-products/all-products.component';
+import { TopbarComponent } from './topbar/topbar.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { FeatureInfoComponent } from './feature-info/feature-info.component';
+import { WidgetSmallComponent } from './widget-small/widget-small.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +20,10 @@ import { AllProductsComponent } from './all-products/all-products.component';
     ProductsLimitComponent,
     ProductHomepageComponent,
     AllProductsComponent,
+    TopbarComponent,
+    SidebarComponent,
+    FeatureInfoComponent,
+    WidgetSmallComponent,
   ],
   imports: [CommonModule, MatIconModule, RouterModule, HttpClientModule],
   exports: [
@@ -24,6 +32,10 @@ import { AllProductsComponent } from './all-products/all-products.component';
     ProductsLimitComponent,
     ProductHomepageComponent,
     AllProductsComponent,
+    TopbarComponent,
+    SidebarComponent,
+    FeatureInfoComponent,
+    WidgetSmallComponent,
   ],
 })
 export class ComponentsModule {}

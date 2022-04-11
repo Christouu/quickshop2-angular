@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
+import { AdminComponent } from './admin/admin.component';
+import { AdminRoutingModule } from './admin/admin-routing.module';
 
 @NgModule({
   declarations: [
@@ -18,10 +20,12 @@ import { FormsModule } from '@angular/forms';
     RegisterComponent,
     ProductsSaleComponent,
     CartComponent,
+    AdminComponent,
   ],
   imports: [
     CommonModule,
     ProductRoutingModule,
+    AdminRoutingModule,
     ComponentsModule,
     HttpClientModule,
     MatIconModule,
