@@ -1,3 +1,69 @@
-p {
-  padding: 100px;
+.container {
+  padding-top: 120px;
+
+  .title {
+    padding: 20px 30px;
+
+    font-size: 44px;
+    text-align: center;
+  }
+
+  .line {
+    border: 5px solid #f09d51;
+    width: 10%;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
+
+  .input {
+    display: flex;
+    align-items: center;
+    margin: 40px 60px;
+    position: relative;
+    border: 1px solid black;
+    width: 15%;
+    align-items: center;
+    justify-content: space-around;
+
+    input {
+      width: 100%;
+      padding: 10px;
+      font-size: 18px;
+      border: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .icon {
+      margin-right: 10px;
+    }
+  }
+
+  .infoContainer {
+    padding: 0px 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 3rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.normal {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    329deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 0, 0, 1) 60%
+  );
+}
+
+.paginationCOntrols {
+  text-align: center;
 }

@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllProductsComponent implements OnInit {
   products: any = [];
-  allProductsStyles = true;
+
   constructor(public http: HttpClient) {}
 
   ngOnInit(): void {

@@ -1,1 +1,23 @@
-<p>products works!</p>
+<div class="container">
+  <h1 class="title">Продукти на промоция</h1>
+  <div class="line"></div>
+  <div class="input">
+    <input type="text" (keyup)="getFilteredData($event)" />
+    <mat-icon class="icon">search</mat-icon>
+  </div>
+  <div class="infoContainer">
+    <app-product-homepage
+      *ngFor="
+        let product of products
+          | paginate
+            : { itemsPerPage: 25, currentPage: page, totalItems: totalLength }
+      "
+      [input]="product"
+    ></app-product-homepage>
+  </div>
+
+  <pagination-controls
+    class="paginationCOntrols"
+    (pageChange)="page = $event"
+  ></pagination-controls>
+</div>

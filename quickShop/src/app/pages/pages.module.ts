@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
 import { AdminRoutingModule } from './admin/admin-routing.module';
 import { LoginComponent } from './login/login.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { LoginComponent } from './login/login.component';
     ComponentsModule,
     HttpClientModule,
     MatIconModule,
+    NgxPaginationModule,
   ],
 })
 export class PagesModule {}
