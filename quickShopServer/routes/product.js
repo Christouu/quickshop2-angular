@@ -70,7 +70,7 @@ router.get("/", async (req, res) => {
 
     if (queryNew) {
       // if ?new in dns get all products, sort them by createdAt with the newest first, then get only the first 20
-      products = await Product.find().sort({ createdAt: -1 }).limit(10);
+      products = await Product.find().sort({ createdAt: -1 }).limit(12);
     } else if (queryCategory) {
       products = await Product.find({
         //search in categories key

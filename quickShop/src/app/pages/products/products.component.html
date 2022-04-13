@@ -14,10 +14,12 @@
       "
       [input]="product"
     ></app-product-homepage>
+    <div class="noProducts" *ngIf="nothingFound">Няма налични продукти!!!</div>
   </div>
 
   <pagination-controls
     class="paginationCOntrols"
     (pageChange)="page = $event"
+    [autoHide]="true"
   ></pagination-controls>
 </div>

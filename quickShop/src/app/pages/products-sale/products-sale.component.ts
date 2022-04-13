@@ -11,6 +11,8 @@ export class ProductsSaleComponent implements OnInit {
   products: any = [];
   totalLength: any;
   page: number = 1;
+
+  nothingFound = false;
   constructor(public http: HttpClient) {}
 
   ngOnInit(): void {
@@ -30,7 +32,10 @@ export class ProductsSaleComponent implements OnInit {
         )
         .subscribe((products) => {
           this.products = products;
+          if (this.products.length === 0) {
+            this.nothingFound = true;
+          }
         });
-    }, 2000);
+    }, 1000);
   }
 }

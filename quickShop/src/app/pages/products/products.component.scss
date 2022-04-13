@@ -54,18 +54,22 @@
   a {
     text-decoration: none;
   }
-}
 
-.normal {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    329deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(0, 0, 0, 1) 60%
-  );
-}
+  .normal {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      329deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(0, 0, 0, 1) 60%
+    );
+  }
 
-.paginationCOntrols {
-  text-align: center;
-  margin-bottom: 20px;
+  .paginationCOntrols {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .noProducts {
+    font-size: 32px;
+  }
 }
