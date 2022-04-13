@@ -17,7 +17,7 @@ export class ProductsLimitComponent implements OnInit {
 
   ngOnInit(): void {
     this.http
-      .get<Product[]>('http://localhost:5000/api/product/onSale')
+      .get<Product[]>('http://localhost:5000/api/product/onSale?new=true')
       .subscribe((products) => {
         this.products = products;
       });

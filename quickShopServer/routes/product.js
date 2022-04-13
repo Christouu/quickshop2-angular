@@ -90,10 +90,40 @@ router.get("/", async (req, res) => {
 });
 
 //get products on sale
+// router.get("/onSale", async (req, res) => {
+//   try {
+//     const productsOnSale = await Product.find({ onSale: true });
+//     res.status(200).json(productsOnSale);
+//   } catch (error) {
+//     res.status(500).json(error);
+//   }
+// });
 router.get("/onSale", async (req, res) => {
+  const queryNew = req.query.new;
+  const queryCategory = req.query.category;
+
   try {
-    const productsOnSale = await Product.find({ onSale: true });
-    res.status(200).json(productsOnSale);
+    let products;
+
+    if (queryNew) {
+      // if ?new in dns get all products, sort them by createdAt with the newest first, then get only the first 20
+      products = await Product.find({ onSale: true })
+        .sort({ createdAt: -1 })
+        .limit(10);
+    } else if (queryCategory) {
+      products = await Product.find({
+        //search in categories key
+        onSale: true,
+        categories: {
+          //where queryCategory is included in categories
+          $in: [queryCategory],
+        },
+      });
+    } else {
+      products = await Product.find({});
+    }
+
+    res.status(200).json(products);
   } catch (error) {
     res.status(500).json(error);
   }

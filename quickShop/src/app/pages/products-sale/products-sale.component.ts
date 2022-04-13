@@ -15,7 +15,7 @@ export class ProductsSaleComponent implements OnInit {
 
   ngOnInit(): void {
     this.http
-      .get('http://localhost:5000/api/product/onSale')
+      .get('http://localhost:5000/api/product/onSale?new=true')
       .subscribe((products) => {
         this.products = products;
         this.totalLength = this.products.length;
@@ -25,10 +25,12 @@ export class ProductsSaleComponent implements OnInit {
   getFilteredData(evt: any) {
     setTimeout(() => {
       this.http
-        .get(`http://localhost:5000/api/product?category=${evt.target.value}`)
+        .get(
+          `http://localhost:5000/api/product/onSale?category=${evt.target.value}`
+        )
         .subscribe((products) => {
           this.products = products;
         });
-    }, 1000);
+    }, 2000);
   }
 }
