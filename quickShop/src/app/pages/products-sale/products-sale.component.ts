@@ -9,9 +9,8 @@ import { debounceTime, map, Observable, Subject } from 'rxjs';
 })
 export class ProductsSaleComponent implements OnInit {
   products: any = [];
-  // subject = new Subject();
-  // //@ts-ignore
-  // results$: Observable;
+  totalLength: any;
+  page: number = 1;
   constructor(public http: HttpClient) {}
 
   ngOnInit(): void {
@@ -19,6 +18,7 @@ export class ProductsSaleComponent implements OnInit {
       .get('http://localhost:5000/api/product/onSale')
       .subscribe((products) => {
         this.products = products;
+        this.totalLength = this.products.length;
       });
   }
 

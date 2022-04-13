@@ -7,8 +7,17 @@
   </div>
   <div class="infoContainer">
     <app-product-homepage
-      *ngFor="let product of products"
+      *ngFor="
+        let product of products
+          | paginate
+            : { itemsPerPage: 20, currentPage: page, totalItems: totalLength }
+      "
       [input]="product"
     ></app-product-homepage>
   </div>
+
+  <pagination-controls
+    class="paginationCOntrols"
+    (pageChange)="page = $event"
+  ></pagination-controls>
 </div>

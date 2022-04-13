@@ -10,7 +10,7 @@
       *ngFor="
         let product of products
           | paginate
-            : { itemsPerPage: 25, currentPage: page, totalItems: totalLength }
+            : { itemsPerPage: 20, currentPage: page, totalItems: totalLength }
       "
       [input]="product"
     ></app-product-homepage>

@@ -46,7 +46,8 @@
     padding: 0px 10rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
     margin-bottom: 3rem;
   }
 
@@ -66,4 +67,5 @@
 
 .paginationCOntrols {
   text-align: center;
+  margin-bottom: 20px;
 }
