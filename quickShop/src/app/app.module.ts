@@ -9,6 +9,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PagesModule } from './pages/pages.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, NotFoundComponent],
@@ -22,6 +23,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     PagesModule,
     BrowserAnimationsModule,
+    MatSortModule,
   ],
   providers: [],
 

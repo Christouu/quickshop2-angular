@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  margin-top: 10px;
+
+  .mat-elevation-z8 {
+    flex: 1;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+
+  mat-footer-row {
+    display: none;
+  }
+
+  .mat-column-categories {
+    flex: 0 0 30%;
+    margin: 0px 20px;
+  }
+}

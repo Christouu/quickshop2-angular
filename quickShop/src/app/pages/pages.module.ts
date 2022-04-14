@@ -14,6 +14,12 @@ import { AdminComponent } from './admin/admin.component';
 import { AdminRoutingModule } from './admin/admin-routing.module';
 import { LoginComponent } from './login/login.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { AdminUsersComponent } from './admin-users/admin-users.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSortModule } from '@angular/material/sort';
+import { MatDialogModule } from '@angular/material/dialog';
+import { AdminProductsComponent } from './admin-products/admin-products.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +30,11 @@ import { NgxPaginationModule } from 'ngx-pagination';
     CartComponent,
     AdminComponent,
     LoginComponent,
+    AdminUsersComponent,
+    AdminProductsComponent,
   ],
   imports: [
+    MatProgressSpinnerModule,
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
@@ -35,6 +44,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
     HttpClientModule,
     MatIconModule,
     NgxPaginationModule,
+    MatTableModule,
+    MatSortModule,
+    MatDialogModule,
   ],
 })
 export class PagesModule {}

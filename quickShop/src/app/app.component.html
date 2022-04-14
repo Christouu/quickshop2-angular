@@ -2,7 +2,9 @@
   *ngIf="
     router.url !== '/login' &&
     router.url !== '/register' &&
-    router.url !== '/admin'
+    router.url !== '/admin' &&
+    router.url !== '/admin/users' &&
+    router.url !== '/admin/products'
   "
 ></app-navigation>
 
@@ -14,6 +16,8 @@
   *ngIf="
     router.url !== '/login' &&
     router.url !== '/register' &&
-    router.url !== '/admin'
+    router.url !== '/admin' &&
+    router.url !== '/admin/users' &&
+    router.url !== '/admin/products'
   "
 ></app-footer>

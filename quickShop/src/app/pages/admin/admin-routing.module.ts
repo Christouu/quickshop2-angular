@@ -1,5 +1,6 @@
 import { RouterModule, Routes } from '@angular/router';
-import { ProductComponent } from '../product/product.component';
+import { AdminProductsComponent } from '../admin-products/admin-products.component';
+import { AdminUsersComponent } from '../admin-users/admin-users.component';
 import { AdminComponent } from './admin.component';
 
 const routes: Routes = [
@@ -12,8 +13,12 @@ const routes: Routes = [
         component: AdminComponent,
       },
       {
-        path: ':id',
-        component: ProductComponent,
+        path: 'users',
+        component: AdminUsersComponent,
+      },
+      {
+        path: 'products',
+        component: AdminProductsComponent,
       },
     ],
   },

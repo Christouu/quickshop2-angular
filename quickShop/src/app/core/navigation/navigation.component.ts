@@ -8,7 +8,7 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class NavigationComponent implements OnInit {
   admin = true;
-  logged = false;
+  logged: any = localStorage.getItem('token');
   quantity = 0;
 
   constructor(public cartService: CartService) {}
