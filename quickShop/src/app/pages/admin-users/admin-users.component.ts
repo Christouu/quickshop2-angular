@@ -3,6 +3,10 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
 import { Router } from '@angular/router';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { AddUserComponent } from 'src/app/components/add-user/add-user.component';
+import { UserServiceService } from 'src/app/shared/user-service.service';
+import { UpdateUserComponent } from 'src/app/components/update-user/update-user.component';
 
 export interface PeriodicElement {
   name: string;
@@ -28,10 +32,15 @@ export class AdminUsersComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
   //@ts-ignore
   products: MatTableDataSource<any>;
-
+  searchKey = '';
   spinner = false;
 
-  constructor(public http: HttpClient, private router: Router) {}
+  constructor(
+    public http: HttpClient,
+    private router: Router,
+    private dialog: MatDialog,
+    private userService: UserServiceService
+  ) {}
 
   ngOnInit(): void {
     this.spinner = true;
@@ -42,7 +51,16 @@ export class AdminUsersComponent implements OnInit {
     });
   }
 
-  onEdit(row: any) {}
+  onEdit(row: any) {
+    row.$key = true;
+    const { createdAt, updatedAt, __v, ...otherInfo } = row;
+    this.userService.populateForm(otherInfo);
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = '60%';
+    this.dialog.open(UpdateUserComponent, dialogConfig);
+  }
   onDelete(key: any) {
     //@ts-ignore
     const user: any = localStorage.getItem('token');
@@ -65,5 +83,22 @@ export class AdminUsersComponent implements OnInit {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
     this.router.onSameUrlNavigation = 'reload';
     this.router.navigate([currentUrl]);
+  }
+
+  onSearchClear() {
+    this.searchKey = '';
+    this.applyFilter();
+  }
+
+  applyFilter() {
+    this.products.filter = this.searchKey.trim().toLowerCase();
+  }
+
+  onCreate() {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = '60%';
+    this.dialog.open(AddUserComponent, dialogConfig);
   }
 }

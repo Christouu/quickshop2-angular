@@ -1,3 +1,15 @@
+.search-div {
+  display: flex;
+  align-items: center;
+
+  button {
+    margin: 0px 50px;
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+  }
+}
+
 .container {
   display: flex;
   margin-top: 10px;
